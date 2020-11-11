@@ -64,9 +64,37 @@ function team() {
     ]).then(function(data){
         if (data.memberChoice === "Engineer"){
             engineer();
-        } else if (data.memberChoice === "Intern"){
-            intern();
         } else (outputTeam());
+    });
+};
+
+function engineer() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name:"engineerName",
+            message: "What is the engineer's name?"
+        },
+        {
+            type: "input",
+            name:"engineerId",
+            message: "What is the engineer's ID?"
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "What is the engineer's email?"
+        },
+        {
+            type: "input",
+            name: "engineerGithub",
+            message: "What is the engineer's GitHub username?"
+        }
+    ]). then(function(data){
+        const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineerGithub);
+        teamMembers.push(engineer);
+        emptyId.push(data.engineerId);
+        team();
     });
 };
 
