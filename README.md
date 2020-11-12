@@ -9,9 +9,8 @@ This application utilizes node.js, inquires, fs, and an app.js file that holds t
 There is an output folder in this application. This is where the team.js file will be created (this is the file created once the user answers all the questions prompted).
 
 To view the final walk through video, please use this link:
-https://drive.google.com/file/d/10Q4gtREk4AKZjJapSi1Fm_KDSNmFUarL/view
 
--
+-https://drive.google.com/file/d/10Q4gtREk4AKZjJapSi1Fm_KDSNmFUarL/view
 
 # Installation
 
